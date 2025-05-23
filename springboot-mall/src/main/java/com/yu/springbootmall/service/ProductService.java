@@ -8,4 +8,6 @@ public interface ProductService {
         Product getProductById(Integer productId);
 
         Integer createProduct(ProductRequest productRequest);
+
+        void updateProdcut(Integer productId, ProductRequest productRequest);
 }
