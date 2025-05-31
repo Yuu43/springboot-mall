@@ -1,5 +1,6 @@
 package com.yu.springbootmall.service;
 
+import com.yu.springbootmall.dto.UserLoginRequest;
 import com.yu.springbootmall.dto.UserRegisterRequest;
 import com.yu.springbootmall.model.User;
 
@@ -9,4 +10,5 @@ public interface UserService {
 
     Integer register(UserRegisterRequest userRegisterRequest);
 
+    User login(UserLoginRequest userLoginRequest);
 }
