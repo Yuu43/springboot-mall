@@ -1,3 +1,5 @@
+-- H2資料庫
+
 CREATE TABLE IF NOT EXISTS product
 (
     product_id         INT          NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -7,6 +9,15 @@ CREATE TABLE IF NOT EXISTS product
     price              INT          NOT NULL,
     stock              INT          NOT NULL,
     description        VARCHAR(1024),
+    created_date       TIMESTAMP    NOT NULL,
+    last_modified_date TIMESTAMP    NOT NULL
+    );
+
+CREATE TABLE IF NOT EXISTS user
+(
+    user_id            INT          NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    email              VARCHAR(256) NOT NULL UNIQUE,    -- My SQL資料庫用 UNIQUE KEY， H2則是用 UNIQUE
+    password           VARCHAR(256) NOT NULL,
     created_date       TIMESTAMP    NOT NULL,
     last_modified_date TIMESTAMP    NOT NULL
     );
